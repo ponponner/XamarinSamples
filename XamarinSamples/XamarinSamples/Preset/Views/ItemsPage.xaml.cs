@@ -1,11 +1,11 @@
 ﻿using System;
 
-using XamarinSamples.Models;
-using XamarinSamples.ViewModels;
+using XamarinSamples.Preset.Models;
+using XamarinSamples.Preset.ViewModels;
 
 using Xamarin.Forms;
 
-namespace XamarinSamples.Views
+namespace XamarinSamples.Preset.Views
 {
     public partial class ItemsPage : ContentPage
     {

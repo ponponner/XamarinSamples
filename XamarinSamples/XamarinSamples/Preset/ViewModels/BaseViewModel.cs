@@ -1,10 +1,10 @@
-﻿using XamarinSamples.Helpers;
-using XamarinSamples.Models;
-using XamarinSamples.Services;
+﻿using XamarinSamples.Preset.Helpers;
+using XamarinSamples.Preset.Models;
+using XamarinSamples.Preset.Services;
 
 using Xamarin.Forms;
 
-namespace XamarinSamples.ViewModels
+namespace XamarinSamples.Preset.ViewModels
 {
     public class BaseViewModel : ObservableObject
     {

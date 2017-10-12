@@ -1,7 +1,7 @@
 ﻿
 using Xamarin.Forms;
 
-namespace XamarinSamples.Views
+namespace XamarinSamples.Preset.Views
 {
     public partial class AboutPage : ContentPage
     {

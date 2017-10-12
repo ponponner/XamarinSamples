@@ -2,13 +2,13 @@
 using System.Diagnostics;
 using System.Threading.Tasks;
 
-using XamarinSamples.Helpers;
-using XamarinSamples.Models;
-using XamarinSamples.Views;
+using XamarinSamples.Preset.Helpers;
+using XamarinSamples.Preset.Models;
+using XamarinSamples.Preset.Views;
 
 using Xamarin.Forms;
 
-namespace XamarinSamples.ViewModels
+namespace XamarinSamples.Preset.ViewModels
 {
     public class ItemsViewModel : BaseViewModel
     {

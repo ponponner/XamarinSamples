@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace XamarinSamples.Helpers
+namespace XamarinSamples.Preset.Helpers
 {
     /// <summary>
     /// Observable object with INotifyPropertyChanged implemented

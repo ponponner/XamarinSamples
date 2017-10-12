@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace XamarinSamples.Helpers
+namespace XamarinSamples.Preset.Helpers
 {
     public class MessagingCenterAlert
     {

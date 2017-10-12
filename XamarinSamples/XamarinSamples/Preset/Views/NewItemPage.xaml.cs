@@ -1,10 +1,10 @@
 ﻿using System;
 
-using XamarinSamples.Models;
+using XamarinSamples.Preset.Models;
 
 using Xamarin.Forms;
 
-namespace XamarinSamples.Views
+namespace XamarinSamples.Preset.Views
 {
     public partial class NewItemPage : ContentPage
     {

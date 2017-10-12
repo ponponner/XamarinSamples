@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-using XamarinSamples.Models;
+using XamarinSamples.Preset.Models;
 
 using Xamarin.Forms;
 
-[assembly: Dependency(typeof(XamarinSamples.Services.MockDataStore))]
-namespace XamarinSamples.Services
+[assembly: Dependency(typeof(XamarinSamples.Preset.Services.MockDataStore))]
+namespace XamarinSamples.Preset.Services
 {
     public class MockDataStore : IDataStore<Item>
     {

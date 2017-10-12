@@ -1,6 +1,6 @@
-﻿using XamarinSamples.Models;
+﻿using XamarinSamples.Preset.Models;
 
-namespace XamarinSamples.ViewModels
+namespace XamarinSamples.Preset.ViewModels
 {
     public class ItemDetailViewModel : BaseViewModel
     {

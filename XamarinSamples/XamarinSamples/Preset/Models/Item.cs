@@ -1,4 +1,4 @@
-﻿namespace XamarinSamples.Models
+﻿namespace XamarinSamples.Preset.Models
 {
     public class Item : BaseDataObject
     {

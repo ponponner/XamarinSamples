@@ -1,7 +1,7 @@
 ﻿using System;
-using XamarinSamples.Helpers;
+using XamarinSamples.Preset.Helpers;
 
-namespace XamarinSamples.Models
+namespace XamarinSamples.Preset.Models
 {
     public class BaseDataObject : ObservableObject
     {
