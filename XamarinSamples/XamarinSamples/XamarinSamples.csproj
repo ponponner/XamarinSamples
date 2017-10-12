@@ -38,29 +38,35 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Preset\Helpers\MessengingCenterAlert.cs" />
-    <Compile Include="Preset\Helpers\ObservableObject.cs" />
-    <Compile Include="Preset\Helpers\ObservableRangeCollection.cs" />
-    <Compile Include="Preset\Models\BaseDataObject.cs" />
-    <Compile Include="Preset\Models\Item.cs" />
+    <Compile Include="Helpers\MessengingCenterAlert.cs" />
+    <Compile Include="Helpers\ObservableObject.cs" />
+    <Compile Include="Helpers\ObservableRangeCollection.cs" />
+    <Compile Include="_Preset\Helpers\MessengingCenterAlert.cs" />
+    <Compile Include="_Preset\Helpers\ObservableObject.cs" />
+    <Compile Include="_Preset\Helpers\ObservableRangeCollection.cs" />
+    <Compile Include="_Preset\Models\BaseDataObject.cs" />
+    <Compile Include="_Preset\Models\Item.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Preset\Services\IDataStore.cs" />
-    <Compile Include="Preset\Services\MockDataStore.cs" />
-    <Compile Include="Preset\ViewModels\AboutViewModel.cs" />
-    <Compile Include="Preset\ViewModels\BaseViewModel.cs" />
-    <Compile Include="Preset\ViewModels\ItemDetailViewModel.cs" />
-    <Compile Include="Preset\ViewModels\ItemsViewModel.cs" />
-    <Compile Include="Preset\Views\AboutPage.xaml.cs">
+    <Compile Include="_Preset\Services\IDataStore.cs" />
+    <Compile Include="_Preset\Services\MockDataStore.cs" />
+    <Compile Include="_Preset\ViewModels\AboutViewModel.cs" />
+    <Compile Include="_Preset\ViewModels\BaseViewModel.cs" />
+    <Compile Include="_Preset\ViewModels\ItemDetailViewModel.cs" />
+    <Compile Include="_Preset\ViewModels\ItemsViewModel.cs" />
+    <Compile Include="_Preset\Views\AboutPage.xaml.cs">
       <DependentUpon>AboutPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Preset\Views\ItemDetailPage.xaml.cs">
+    <Compile Include="_Preset\Views\ItemDetailPage.xaml.cs">
       <DependentUpon>ItemDetailPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Preset\Views\ItemsPage.xaml.cs">
+    <Compile Include="_Preset\Views\ItemsPage.xaml.cs">
       <DependentUpon>ItemsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Preset\Views\NewItemPage.xaml.cs">
+    <Compile Include="_Preset\Views\NewItemPage.xaml.cs">
       <DependentUpon>NewItemPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="_Preset\_App.xaml.cs">
+      <DependentUpon>_App.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -68,22 +74,26 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Preset\Views\AboutPage.xaml">
+    <EmbeddedResource Include="_Preset\Views\AboutPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Preset\Views\ItemDetailPage.xaml">
+    <EmbeddedResource Include="_Preset\Views\ItemDetailPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Preset\Views\ItemsPage.xaml">
+    <EmbeddedResource Include="_Preset\Views\ItemsPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Preset\Views\NewItemPage.xaml">
+    <EmbeddedResource Include="_Preset\Views\NewItemPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <Page Include="_Preset\_App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -98,6 +108,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="Services\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="Views\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.3.4.247\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.4.247\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
