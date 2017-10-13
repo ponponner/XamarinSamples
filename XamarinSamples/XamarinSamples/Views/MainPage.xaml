@@ -4,7 +4,7 @@
              x:Class="XamarinSamples.Views.MainPage">
     <ContentPage.Content>
         <StackLayout>
-            <ListView x:Name="SamplesListView"
+            <ListView x:Name="SamplePagesListView"
                       ItemsSource="{Binding .}"
                       VerticalOptions="FillAndExpand"
                       HasUnevenRows="true"
@@ -12,7 +12,7 @@
                       IsPullToRefreshEnabled="true"
                       IsRefreshing="{Binding IsBusy, Mode=OneWay}"
                       CachingStrategy="RecycleElement"
-                      ItemSelected="OnSamplePageSelected">
+                      ItemSelected="OnSelectedItem">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>

@@ -42,7 +42,6 @@
     <Compile Include="Helpers\ObservableObject.cs" />
     <Compile Include="Helpers\ObservableRangeCollection.cs" />
     <Compile Include="Models\CounterModel.cs" />
-    <Compile Include="Models\NamedColor.cs" />
     <Compile Include="Models\StaticReferenceModel.cs" />
     <Compile Include="Models\BindingModel.cs" />
     <Compile Include="ViewModels\BaseVM.cs" />
