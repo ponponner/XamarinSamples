@@ -15,60 +15,63 @@
     </ContentPage.Resources>
 
     <ContentPage.Content>
-        <StackLayout Margin="10, 10, 10, 10"
+        <ScrollView>
+            <StackLayout Margin="10, 10, 10, 10"
                      BackgroundColor="YellowGreen">
 
-            <Label Text="Samples" />
+                <Label Text="Samples" />
 
-            <StackLayout Style="{StaticResource cardStyle}">
-                <Label Text="# Reference Static String" />
-                <Label Text="{x:Static models:StaticReferenceModel.StaticField}" />
-                <Label Text="{x:Static models:StaticReferenceModel.StaticProperty}" />
-            </StackLayout>
+                <StackLayout Style="{StaticResource cardStyle}">
+                    <Label Text="# Reference Static String" />
+                    <Label Text="{x:Static models:StaticReferenceModel.StaticField}" />
+                    <Label Text="{x:Static models:StaticReferenceModel.StaticProperty}" />
+                </StackLayout>
 
-            <StackLayout Style="{StaticResource cardStyle}">
-                <Label Text="# Reference Static Number" />
-                <Slider Value="{x:Static models:StaticReferenceModel.StaticNum}" 
+                <StackLayout Style="{StaticResource cardStyle}">
+                    <Label Text="# Reference Static Number" />
+                    <Slider Value="{x:Static models:StaticReferenceModel.StaticNum}" 
                         Minimum="0"
                         Maximum="10"/>
-                <!--<Label Text="{x:Static models:StaticReferenceModel.StaticDouble}" />-->
-                <!--  => x:Staticでは、参照先と参照元の型が一致している必要があります。たとえ、参照先の方がToStringを持っていたとしても不一致であればビルド時にエラーとなります。-->
-            </StackLayout>
+                    <!--<Label Text="{x:Static models:StaticReferenceModel.StaticDouble}" />-->
+                    <!--  => x:Staticでは、参照先と参照元の型が一致している必要があります。たとえ、参照先の方がToStringを持っていたとしても不一致であればビルド時にエラーとなります。-->
+                </StackLayout>
 
-            <StackLayout Style="{StaticResource cardStyle}">
-                <Label Text="# Reference Static Number As String" />
-                <!--<Label Text="{x:Static models:StaticReferenceModel.StaticCounterModel.CounterString}" />-->
-                <!--  => StaticType.StaticMemberでなければうまくいかないよう。-->
-                <Label Text="{x:Static models:StaticReferenceModel.CounterString}" />
-            </StackLayout>
+                <StackLayout Style="{StaticResource cardStyle}">
+                    <Label Text="# Reference Static Number As String" />
+                    <!--<Label Text="{x:Static models:StaticReferenceModel.StaticCounterModel.CounterString}" />-->
+                    <!--  => StaticType.StaticMemberでなければうまくいかないよう。-->
+                    <Label Text="{x:Static models:StaticReferenceModel.CounterString}" />
+                </StackLayout>
 
-            <StackLayout Style="{StaticResource cardStyle}">
-                <Label Text="# Reference Static List" />
-                <ListView ItemsSource="{x:Static models:StaticReferenceModel.All}">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <ViewCell>
-                                <StackLayout BackgroundColor="{Binding Color}" Padding="5">
-                                    <Label Text="{Binding Name, StringFormat='{0}'}" />
-                                    <StackLayout Orientation="Horizontal">
-                                        <Label Text="{Binding Color.R, StringFormat='R: {0},'}" />
-                                        <Label Text="{Binding Color.G, StringFormat='G: {0},'}" />
-                                        <Label Text="{Binding Color.B, StringFormat='B: {0}'}" />
+                <StackLayout Style="{StaticResource cardStyle}">
+                    <Label Text="# Reference Static List" />
+                    <ListView ItemsSource="{x:Static models:StaticReferenceModel.All}"
+                              HeightRequest="200">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout BackgroundColor="{Binding Color}" Padding="5, 5, 5, 5">
+                                        <Label Text="{Binding Name, StringFormat='{0}'}" />
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label Text="{Binding Color.R, StringFormat='R: {0},'}" />
+                                            <Label Text="{Binding Color.G, StringFormat='G: {0},'}" />
+                                            <Label Text="{Binding Color.B, StringFormat='B: {0}'}" />
+                                        </StackLayout>
                                     </StackLayout>
-                                </StackLayout>
-                            </ViewCell>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
-            </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
 
-            <StackLayout Style="{StaticResource cardStyle}">
-                <Label Text="# Change Static Somethings" />
-                <Label Text="{x:Static models:StaticReferenceModel.CounterString}" />
-                <Button Text="PUSH TO INCREMENT" Clicked="OnClickIncrementStaticCounterButton" />
-                <Button Text="PUSH TO RESET" Clicked="OnClickResetStaticCounterButton" />
-            </StackLayout>
+                <StackLayout Style="{StaticResource cardStyle}">
+                    <Label Text="# Change Static Somethings" />
+                    <Label Text="{x:Static models:StaticReferenceModel.CounterString}" />
+                    <Button Text="PUSH TO INCREMENT" Clicked="OnClickIncrementStaticCounterButton" />
+                    <Button Text="PUSH TO RESET" Clicked="OnClickResetStaticCounterButton" />
+                </StackLayout>
 
-        </StackLayout>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

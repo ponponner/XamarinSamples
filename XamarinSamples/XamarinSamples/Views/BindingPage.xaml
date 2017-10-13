@@ -23,39 +23,41 @@
     </ContentPage.Resources>
 
     <ContentPage.Content>
-        <StackLayout Margin="10, 10, 10, 10"
+        <ScrollView>
+            <StackLayout Margin="10, 10, 10, 10"
                      BackgroundColor="YellowGreen">
 
-            <Label Text="Binding" />
+                <Label Text="Binding" />
 
-            <StackLayout Style="{StaticResource cardStyle}">
-                <Label Text="# Between Views" />
-                <Slider x:Name="slider"
+                <StackLayout Style="{StaticResource cardStyle}">
+                    <Label Text="# Between Views" />
+                    <Slider x:Name="slider"
                         Minimum="0"
                         Maximum="3"
                         Value="0"
                         VerticalOptions="Center" />
-                <Label BindingContext="{x:Reference Name=slider}"
+                    <Label BindingContext="{x:Reference Name=slider}"
                        Text="{Binding Path=Value, StringFormat='Value: {0:F2}'}"
                        VerticalOptions="Center" />
-            </StackLayout>
+                </StackLayout>
 
-            <StackLayout Style="{StaticResource cardStyle}">
-                <Label Text="# Statc Model" />
-                <Label Text="{Binding Counter, Source={x:Static models:CounterModel.StaticCounterModel}, StringFormat='x:Staticを利用したBinding: {0}'}" />
-                <Label Text="{Binding StaticCounterModel.Counter, StringFormat='ｲﾝｽﾀﾝｽのﾌﾟﾛﾊﾟﾃｨにstaticメンバの値を格納してのBinding: {0}'}" />
-                <Button Text="PUSH TO INCREMENT" Clicked="OnClickIncrementStaticCounterButton" />
-                <Button Text="PUSH TO RESET" Clicked="OnClickResetStaticCounterButton" />
-            </StackLayout>
+                <StackLayout Style="{StaticResource cardStyle}">
+                    <Label Text="# Statc Model" />
+                    <Label Text="{Binding Counter, Source={x:Static models:CounterModel.StaticCounterModel}, StringFormat='x:Staticを利用したBinding: {0}'}" />
+                    <Label Text="{Binding StaticCounterModel.Counter, StringFormat='ｲﾝｽﾀﾝｽのﾌﾟﾛﾊﾟﾃｨにstaticメンバの値を格納してのBinding: {0}'}" />
+                    <Button Text="PUSH TO INCREMENT" Clicked="OnClickIncrementStaticCounterButton" />
+                    <Button Text="PUSH TO RESET" Clicked="OnClickResetStaticCounterButton" />
+                </StackLayout>
 
-            <StackLayout Style="{StaticResource cardStyle}">
-                <Label Text="# Instance Models" />
-                <Label Text="{Binding BindingModel.CounterModel.Counter, StringFormat='SampleModel.Counter: {0}'}" />
-                <Label Text="{Binding BindingModel.CounterModel.CounterInvalid, StringFormat='SampleModel.CounterInvalid: {0}'}" />
-                <Button Text="PUSH TO INCREMENT" Clicked="OnClickIncrementCounterButton" />
-                <Button Text="PUSH TO RESET" Clicked="OnClickResetCounterButton" />
-            </StackLayout>
+                <StackLayout Style="{StaticResource cardStyle}">
+                    <Label Text="# Instance Models" />
+                    <Label Text="{Binding BindingModel.CounterModel.Counter, StringFormat='SampleModel.Counter: {0}'}" />
+                    <Label Text="{Binding BindingModel.CounterModel.CounterInvalid, StringFormat='SampleModel.CounterInvalid: {0}'}" />
+                    <Button Text="PUSH TO INCREMENT" Clicked="OnClickIncrementCounterButton" />
+                    <Button Text="PUSH TO RESET" Clicked="OnClickResetCounterButton" />
+                </StackLayout>
 
-        </StackLayout>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
