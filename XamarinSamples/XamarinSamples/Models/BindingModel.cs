@@ -16,7 +16,7 @@ namespace XamarinSamples.Models
         #endregion
 
         #region Instance fields and properties.
-        public CounterModel CounterModel;
+        public CounterModel CounterModel { private set; get; } = new CounterModel();
         #endregion
 
     }

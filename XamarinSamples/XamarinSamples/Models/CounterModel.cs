@@ -11,6 +11,10 @@ namespace XamarinSamples.Models
     public class CounterModel : ObservableObject
     {
 
+        #region Static fields and properties.
+        public static CounterModel StaticCounterModel { private set; get; } = new CounterModel();
+        #endregion
+
         #region Instance fields and properties.
         int _counter;
         int _stepWidth;
@@ -32,7 +36,6 @@ namespace XamarinSamples.Models
         #endregion
 
         #region Instance methods.
-
         public CounterModel()
         {
             this.StepWidth = 1;
@@ -48,7 +51,6 @@ namespace XamarinSamples.Models
             this.Counter += this.StepWidth;
             this.CounterInvalid += StepWidth;
         }
-
         #endregion
 
     }

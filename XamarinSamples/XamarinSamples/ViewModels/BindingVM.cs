@@ -17,6 +17,7 @@ namespace XamarinSamples.ViewModels
         #region Instance fields and properties.
         public BindingModel StaticBindingModel { private set; get; } = BindingModel.StaticBindingModel;
         public BindingModel StaticBindingModelAnother { private set; get; } = BindingModel.StaticBindingModel;
+        public CounterModel StaticCounterModel { private set; get; } = CounterModel.StaticCounterModel;
         public BindingModel BindingModel { private set; get; } = new BindingModel(); // BindingContextの対象はプロパティでなければならない。
         #endregion
 
@@ -47,7 +48,7 @@ namespace XamarinSamples.ViewModels
 
             try
             {
-                this.StaticBindingModel.CounterModel.ResetCounter();
+                CounterModel.StaticCounterModel.ResetCounter();
             }
             catch (Exception ex)
             {
@@ -67,7 +68,7 @@ namespace XamarinSamples.ViewModels
 
             try
             {
-                this.StaticBindingModel.CounterModel.IncrementCounter();
+                CounterModel.StaticCounterModel.IncrementCounter();
             }
             catch (Exception ex)
             {

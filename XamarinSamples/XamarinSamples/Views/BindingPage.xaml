@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:XamarinSamples;assembly=XamarinSamples"
-             xmlns:m="clr-namespace:XamarinSamples.Models;assembly=XamarinSamples"
+             xmlns:models="clr-namespace:XamarinSamples.Models;assembly=XamarinSamples"
              xmlns:vm="clr-namespace:XamarinSamples.ViewModels"
              x:Class="XamarinSamples.Views.BindingPage"
              Title="{Binding Title}">
@@ -40,21 +40,21 @@
                        VerticalOptions="Center" />
             </StackLayout>
 
-            <!--<StackLayout Style="{StaticResource cardStyle}">
-                <Label Text="# Static Models" />
-                <Label Text="{Binding StaticBindingModel.Counter, StringFormat='StaticSampleModel.Counter: {0}'}" />
-                <Label Text="{Binding StaticBindingModelAnother.Counter, StringFormat='StaticSampleModelAnother.Counter: {0}'}" />
+            <StackLayout Style="{StaticResource cardStyle}">
+                <Label Text="# Statc Model" />
+                <Label Text="{Binding Counter, Source={x:Static models:CounterModel.StaticCounterModel}, StringFormat='x:Staticを利用したBinding: {0}'}" />
+                <Label Text="{Binding StaticCounterModel.Counter, StringFormat='ｲﾝｽﾀﾝｽのﾌﾟﾛﾊﾟﾃｨにstaticメンバの値を格納してのBinding: {0}'}" />
                 <Button Text="PUSH TO INCREMENT" Clicked="OnClickIncrementStaticCounterButton" />
                 <Button Text="PUSH TO RESET" Clicked="OnClickResetStaticCounterButton" />
-            </StackLayout>-->
+            </StackLayout>
 
-            <!--<StackLayout Style="{StaticResource cardStyle}">
+            <StackLayout Style="{StaticResource cardStyle}">
                 <Label Text="# Instance Models" />
-                <Label Text="{Binding BindingModel.Counter, StringFormat='SampleModel.Counter: {0}'}" />
-                <Label Text="{Binding BindingModel.CounterInvalid, StringFormat='SampleModel.CounterInvalid: {0}'}" />
+                <Label Text="{Binding BindingModel.CounterModel.Counter, StringFormat='SampleModel.Counter: {0}'}" />
+                <Label Text="{Binding BindingModel.CounterModel.CounterInvalid, StringFormat='SampleModel.CounterInvalid: {0}'}" />
                 <Button Text="PUSH TO INCREMENT" Clicked="OnClickIncrementCounterButton" />
                 <Button Text="PUSH TO RESET" Clicked="OnClickResetCounterButton" />
-            </StackLayout>-->
+            </StackLayout>
 
         </StackLayout>
     </ContentPage.Content>

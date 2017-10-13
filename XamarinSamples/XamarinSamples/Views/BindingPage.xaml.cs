@@ -19,21 +19,21 @@ namespace XamarinSamples.Views
         }
 
         #region Event handlers.
-        private void OnClickIncrementStaticCounterButton(object sender, EventArgs e)
-        {
-            this.BindingVM.IncrementStaticCounterCommand.Execute(e);
-        }
         private void OnClickResetStaticCounterButton(object sender, EventArgs e)
         {
             this.BindingVM.ResetStaticCounterCommand.Execute(e);
         }
-        private void OnClickIncrementCounterButton(object sender, EventArgs e)
+        private void OnClickIncrementStaticCounterButton(object sender, EventArgs e)
         {
-            this.BindingVM.IncrementCounterCommand.Execute(e);
+            this.BindingVM.IncrementStaticCounterCommand.Execute(e);
         }
         private void OnClickResetCounterButton(object sender, EventArgs e)
         {
             this.BindingVM.ResetCounterCommand.Execute(e);
+        }
+        private void OnClickIncrementCounterButton(object sender, EventArgs e)
+        {
+            this.BindingVM.IncrementCounterCommand.Execute(e);
         }
         #endregion
 
